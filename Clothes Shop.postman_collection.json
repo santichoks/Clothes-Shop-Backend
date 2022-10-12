@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "b6793707-c4b5-4baa-8277-a369b54a839d",
+		"name": "Clothes Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Clothes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/products?gender=Women&size=XS,S,M&style=Red,Spiderman&limit=3&page=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "Women",
+							"description": "Men, Women"
+						},
+						{
+							"key": "size",
+							"value": "XS,S,M",
+							"description": "XS, S, M, L, XL"
+						},
+						{
+							"key": "style",
+							"value": "Red,Spiderman",
+							"description": "Red, Black, Batman, Spiderman"
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"description": "The total number of rows in the table is 30"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "The total number of rows in the table is 30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\": \"30\",\r\n    \"address\": \"178/25 Soi Vuthipun Ratchaprarob Road Phayathai Bangkok 10400\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/orders",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/orders?start_date=2022-10-10&end_date=2022-10-14&status=paid,completed&limit=5&page=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2022-10-10",
+							"description": "filter orders by paid date start"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-10-14",
+							"description": "filter orders by paid date end"
+						},
+						{
+							"key": "status",
+							"value": "paid,completed",
+							"description": "placed_order, paid, shipping_out, completed"
+						},
+						{
+							"key": "limit",
+							"value": "5",
+							"description": "The total number of rows in the table is 90"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "The total number of rows in the table is 90"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
