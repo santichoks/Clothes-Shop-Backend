@@ -66,12 +66,13 @@ exports.getProducts = async (req, res) => {
     connection.query(sql, (err, results, fields) => {
         res.status(200).json({
             status: 'successfully.',
+            total: results.length,
             results
         });
     });
 }
 
-exports.getOrders = async = (req, res) => {
+exports.getOrders = async (req, res) => {
     let sql = `SELECT * FROM orders`;
 
     if (Object.keys(filter(req.query)).length !== 0) {
