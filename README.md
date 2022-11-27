@@ -16,6 +16,7 @@ $ cd Clothes-Shop-Backend
 $ npm install
 ```
 </li>
+ 
 <li>
  
 <strong>Setting up your local environment</strong>
@@ -30,21 +31,28 @@ DB_DATABASE=clothes_shop
 PORT=8000
 ```
 </li>
+ 
 </ul>
 
 <h3>API Endpoints</h3>
 
-The root path is `/`
+The root path is `http://localhost:8000/`, The port can be changed in the `.env` file. 
 
-|Endpoint|Method|Data Requied|Response|
+|Endpoint|Method|Optional Params|Example|
 |-|-|-|-|
-|`/products`|GET|no|no|
-|`/orders`|GET|no|no|
-|`/orders`|POST|no|no|
+|`/products`|GET|`gender [Men, Women]`|`http://127.0.0.1:8000/products?gender=Women`|
+||||`http://127.0.0.1:8000/products?gender=Men,Women`|
+|||`size [XS, S, M, L, XL]`|`http://127.0.0.1:8000/products?size=M`|
+||||`http://127.0.0.1:8000/products?size=XS,S,M`|
+|||`style [Red, Black, Batman, Spiderman]`|`http://127.0.0.1:8000/products?style=Red`|
+||||`http://127.0.0.1:8000/products?style=Red,Spiderman,Batman`|
+
+
 
 <h3>Install the Docker MySQL and phpMyAdmin Container</h3>
 
 <ul>
+ 
 <li>
 
 <strong>Pull image</strong>
@@ -59,6 +67,7 @@ $ docker pull mysql
 $ docker pull phpmyadmin
 ```
 </li>
+ 
 <li>
 
 <strong>Run the container</strong>
@@ -71,6 +80,7 @@ $ docker run --name MySQL -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 $ docker run --name phpMyAdmin -d --link MySQL:db -p 8080:80 phpmyadmin
 ```
 </li>
+ 
 <li>
 
 <strong>Create a database</strong>
@@ -87,6 +97,7 @@ $ mysql -u root -p
 CREATE DATABASE clothes_shop;
 ```
 </li>
+ 
 <li>
 <strong>Import a database table</strong>
  
