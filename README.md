@@ -7,6 +7,7 @@ You can import a database from `./database/clothes_shop.sql` into your MySQL and
 <h3>Get started</h3>
 <ul>
 <li>
+ 
 <strong>Install</strong>
  
 ```
@@ -16,6 +17,7 @@ $ npm install
 ```
 </li>
 <li>
+ 
 <strong>Setting up your local environment</strong>
  
 create an `.env` file in the application root directory.
