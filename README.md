@@ -39,7 +39,6 @@ PORT=8000
 
 <details><summary><h3>API Endpoints</h3></summary>
 <p>
-The root path is `http://localhost:8000/`, The port can be changed in the `.env` file. 
 
 |Endpoint|Method|Optional Params|Example|
 |:-:|:-:|-|-|
@@ -76,7 +75,42 @@ The root path is `http://localhost:8000/`, The port can be changed in the `.env`
         ...
     ]    
 ```
+
+|Endpoint|Method|Optional Params|Example|
+|:-:|:-:|-|-|
+|`/orders`|GET|`start_date [YYYY-MM-DD]`|`http://localhost:8000/orders?start_date=2022-10-10&end_date=2022-10-14`|
+|||`end_date [YYYY-MM-DD]`|`http://localhost:8000/orders?start_date=2022-10-10&end_date=2022-10-14`|
+|||`status [placed_order, paid, shipping_out, completed]`|`http://localhost:8000/orders?status=paid`|
+||||`http://localhost:8000/orders?status=paid,completed`|
+
+<strong>Example :</strong> `http://localhost:8000/orders?start_date=2022-10-10&end_date=2022-10-14&status=paid,completed`
  
+```
+{
+    "status": "successfully.",
+    "results": [
+        {
+            "order_id": 4,
+            "product_id": 4,
+            "status": "completed",
+            "order_date": "2022-10-05T12:38:13.000Z",
+            "paid_date": "2022-10-14T13:08:28.000Z",
+            "address": "178/25 Soi Vuthipun Ratchaprarob Road Phayathai Bangkok 10400"
+        },
+        {
+            "order_id": 7,
+            "product_id": 7,
+            "status": "completed",
+            "order_date": "2022-10-11T12:38:13.000Z",
+            "paid_date": "2022-10-14T13:08:28.000Z",
+            "address": "178/25 Soi Vuthipun Ratchaprarob Road Phayathai Bangkok 10400"
+        },
+        ...
+        ...
+        ...
+    ]
+```
+
 </p>
 </details>
 
