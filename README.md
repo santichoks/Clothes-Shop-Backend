@@ -48,7 +48,7 @@ CREATE DATABASE clothes_shop;
 <li>
 <strong>Import a database table</strong> 
   
-open `http://localhost:8080` and choose a `clothes_shop` database from our created in the preceding, finally import `clothes_shop.sql` from `file://database` path
+open `http://localhost:8080` and choose a `clothes_shop` database from our created in the preceding, finally import `clothes_shop.sql` from `./database/` path
 </li>
 
 </ul>
