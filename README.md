@@ -4,7 +4,8 @@
 
 You can import a database from `./database/clothes_shop.sql` into your MySQL and Postman Collections from `./cs.postman_collection` It might be useful for you. But if your device does not already have MySQL and phpMyAdmin, you can follow the instructions at the bottom to install them using Docker.
 
-<h3>Getting started</h3>
+<details><summary><h3>Getting started</h3></summary>
+<p>
 <ul>
 <li>
  
@@ -33,24 +34,27 @@ PORT=8000
 </li>
  
 </ul>
+</p>
+</details>
 
-<h3>API Endpoints</h3>
-
+<details><summary><h3>API Endpoints</h3></summary>
+<p>
 The root path is `http://localhost:8000/`, The port can be changed in the `.env` file. 
 
 |Endpoint|Method|Optional Params|Example|
-|-|-|-|-|
+|:-:|:-:|-|-|
 |`/products`|GET|`gender [Men, Women]`|`http://127.0.0.1:8000/products?gender=Women`|
 ||||`http://127.0.0.1:8000/products?gender=Men,Women`|
 |||`size [XS, S, M, L, XL]`|`http://127.0.0.1:8000/products?size=M`|
 ||||`http://127.0.0.1:8000/products?size=XS,S,M`|
 |||`style [Red, Black, Batman, Spiderman]`|`http://127.0.0.1:8000/products?style=Red`|
 ||||`http://127.0.0.1:8000/products?style=Red,Spiderman,Batman`|
+ 
+</p>
+</details>
 
-
-
-<h3>Install the Docker MySQL and phpMyAdmin Container</h3>
-
+<details><summary><h3>Install the Docker MySQL and phpMyAdmin Container</h3></summary>
+<p>
 <ul>
  
 <li>
@@ -105,3 +109,5 @@ open `http://localhost:8080` and choose a `clothes_shop` database from our creat
 </li>
 
 </ul>
+</p>
+</details>
