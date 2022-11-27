@@ -1,5 +1,10 @@
 # Clothes-Shop-Backend
 
+<h3>Introduction</h3>
+
+You can import database from `./database/clothes_shop.sql` or if your device does not already have MySQL and phpMyAdmin,
+you can follow the instructions at the bottom to install them using Docker.
+
 <h3>Install the Docker MySQL and phpMyAdmin Container</h3>
 
 <ul>
@@ -46,8 +51,8 @@ CREATE DATABASE clothes_shop;
 ```
 </li>
 <li>
-<strong>Import a database table</strong> 
-  
+<strong>Import a database table</strong>
+ 
 open `http://localhost:8080` and choose a `clothes_shop` database from our created in the preceding, import `clothes_shop.sql` from `./database`
 </li>
 
