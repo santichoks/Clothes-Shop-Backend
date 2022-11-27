@@ -5,6 +5,9 @@
 You can import a database from `./database/clothes_shop.sql` into your MySQL. But if your device does not already have MySQL and phpMyAdmin,
 you can follow the instructions at the bottom to install them using Docker.
 
+<h3>API Endpoints</h3>
+
+
 <h3>Install the Docker MySQL and phpMyAdmin Container</h3>
 
 <ul>
