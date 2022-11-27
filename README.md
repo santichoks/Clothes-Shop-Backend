@@ -39,6 +39,10 @@ PORT=8000
 
 <details><summary><h3>API Endpoints</h3></summary>
 <p>
+<ul>
+<li>
+
+<strong>Get Products</strong>
 
 |Endpoint|Method|Optional Params|Example|
 |:-:|:-:|-|-|
@@ -76,6 +80,12 @@ PORT=8000
     ]    
 ```
 
+</li>
+
+<li>
+
+<strong>Get Orders</strong>
+
 |Endpoint|Method|Optional Params|Example|
 |:-:|:-:|-|-|
 |`/orders`|GET|`start_date [YYYY-MM-DD]`|`http://localhost:8000/orders?start_date=2022-10-10&end_date=2022-10-14`|
@@ -110,7 +120,34 @@ PORT=8000
         ...
     ]
 ```
+</li>
 
+<li>
+
+<strong>Create Order</strong>
+
+|Endpoint|Method|Optional Params|Example|
+|:-:|:-:|:-:|-|
+|`orders`|POST|-|`http://localhost:8000/orders`|
+
+<strong>JSON Body format</strong>
+
+```
+{
+    "product_id": string,
+    "address": string"
+}
+```
+
+<strong>Example :</strong> `http://127.0.0.1:8000/orders`
+ 
+```
+{
+    "status": "order created successfully."
+}
+```
+</li>
+</ul>
 </p>
 </details>
 
