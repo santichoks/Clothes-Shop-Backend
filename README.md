@@ -9,6 +9,12 @@ you can follow the instructions at the bottom to install them using Docker.
 
 The root path is `/`
 
+|Endpoint|Method|Data Requied|Response|
+|-|-|-|-|
+|`/products`|GET|no|no|
+|`/orders`|GET|no|no|
+|`/orders`|POST|no|no|
+
 <h3>Install the Docker MySQL and phpMyAdmin Container</h3>
 
 <ul>
