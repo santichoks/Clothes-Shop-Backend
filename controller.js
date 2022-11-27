@@ -117,7 +117,6 @@ exports.createOrder = async (req, res) => {
     connection.query(sql, (err, results, fields) => {
         res.status(200).json({
             status: 'order created successfully.',
-            results
         });
     });
 }
