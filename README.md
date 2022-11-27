@@ -4,11 +4,19 @@
 
 You can import a database from `./database/clothes_shop.sql` into your MySQL and Postman Collections from `./cs.postman_collection` It might be useful for you. But if your device does not already have MySQL and phpMyAdmin, you can follow the instructions at the bottom to install them using Docker.
 
-<h3>Get start</h3>
+<h3>Get started</h3>
 <ul>
 <li>
+<strong>Install</strong>
  
- <strong>Setting</strong>
+```
+$ git clone https://github.com/santichoks/Clothes-Shop-Backend.git
+$ cd Clothes-Shop-Backend
+$ npm install
+```
+</li>
+<li>
+<strong>Setting up your local environment</strong>
  
 create an `.env` file in the application root directory.
  
@@ -41,12 +49,12 @@ The root path is `/`
 <p><a href="https://hub.docker.com/_/mysql">MySQL Docker Image</a></p>
 
 ```
-docker pull mysql
+$ docker pull mysql
 ```
 <p><a href="https://hub.docker.com/_/phpmyadmin">phpMyAdmin Docker Image</a></p>
 
 ```
-docker pull phpmyadmin
+$ docker pull phpmyadmin
 ```
 </li>
 <li>
@@ -54,11 +62,11 @@ docker pull phpmyadmin
 <strong>Run the container</strong>
 
 ```
-docker run --name MySQL -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+$ docker run --name MySQL -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
 
 ```
-docker run --name phpMyAdmin -d --link MySQL:db -p 8080:80 phpmyadmin
+$ docker run --name phpMyAdmin -d --link MySQL:db -p 8080:80 phpmyadmin
 ```
 </li>
 <li>
@@ -66,11 +74,11 @@ docker run --name phpMyAdmin -d --link MySQL:db -p 8080:80 phpmyadmin
 <strong>Create a database</strong>
 
 ```
-docker exec -it MySQL bash
+$ docker exec -it MySQL bash
 ```
 
 ```
-mysql -u root -p
+$ mysql -u root -p
 ```
 
 ```
