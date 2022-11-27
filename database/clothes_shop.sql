@@ -1,44 +1,15 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Oct 12, 2022 at 04:43 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `clothes_shop`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `orders`
---
 
 CREATE TABLE `orders` (
   `order_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `status` enum('placed_order','paid','shipping_out','completed') NOT NULL DEFAULT 'placed_order',
-  `order_date` datetime NOT NULL,
+  `order_date` datetime DEFAULT (now()),
   `paid_date` datetime DEFAULT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `orders`
---
 
 INSERT INTO `orders` (`order_id`, `product_id`, `status`, `order_date`, `paid_date`, `address`) VALUES
 (1, 1, 'shipping_out', '2022-10-11 19:38:13', '2022-10-14 20:08:28', '178/25 Soi Vuthipun Ratchaprarob Road Phayathai Bangkok 10400'),
@@ -132,12 +103,6 @@ INSERT INTO `orders` (`order_id`, `product_id`, `status`, `order_date`, `paid_da
 (89, 30, 'completed', '2022-10-06 19:38:13', '2022-10-14 20:08:28', '178/25 Soi Vuthipun Ratchaprarob Road Phayathai Bangkok 10400'),
 (90, 30, 'shipping_out', '2022-10-07 19:38:13', '2022-10-14 20:08:28', '178/25 Soi Vuthipun Ratchaprarob Road Phayathai Bangkok 10400');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `products`
---
-
 CREATE TABLE `products` (
   `product_id` int(10) NOT NULL,
   `gender` enum('Men','Women') NOT NULL,
@@ -145,10 +110,6 @@ CREATE TABLE `products` (
   `size` enum('XS','S','M','L','XL') NOT NULL,
   `price` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `products`
---
 
 INSERT INTO `products` (`product_id`, `gender`, `style`, `size`, `price`) VALUES
 (1, 'Men', 'Plain color / Red', 'XS', 400),
@@ -182,39 +143,16 @@ INSERT INTO `products` (`product_id`, `gender`, `style`, `size`, `price`) VALUES
 (29, 'Women', 'Spiderman', 'L', 320),
 (30, 'Women', 'Spiderman', 'XL', 320);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `orders`
---
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`);
 
---
--- Indexes for table `products`
---
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `orders`
---
 ALTER TABLE `orders`
   MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
---
--- AUTO_INCREMENT for table `products`
---
 ALTER TABLE `products`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-COMMIT;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+COMMIT;
