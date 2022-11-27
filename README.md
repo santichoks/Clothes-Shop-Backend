@@ -43,12 +43,39 @@ The root path is `http://localhost:8000/`, The port can be changed in the `.env`
 
 |Endpoint|Method|Optional Params|Example|
 |:-:|:-:|-|-|
-|`/products`|GET|`gender [Men, Women]`|`http://127.0.0.1:8000/products?gender=Women`|
-||||`http://127.0.0.1:8000/products?gender=Men,Women`|
-|||`size [XS, S, M, L, XL]`|`http://127.0.0.1:8000/products?size=M`|
-||||`http://127.0.0.1:8000/products?size=XS,S,M`|
-|||`style [Red, Black, Batman, Spiderman]`|`http://127.0.0.1:8000/products?style=Red`|
-||||`http://127.0.0.1:8000/products?style=Red,Spiderman,Batman`|
+|`/products`|GET|`gender [Men, Women]`|`http://localhost:8000/products?gender=Women`|
+||||`http://localhost:8000/products?gender=Men,Women`|
+|||`size [XS, S, M, L, XL]`|`http://localhost:8000/products?size=M`|
+||||`http://localhost:8000/products?size=XS,S,M`|
+|||`style [Red, Black, Batman, Spiderman]`|`http://localhost:8000/products?style=Red`|
+||||`http://localhost:8000/products?style=Red,Spiderman,Batman`|
+
+<strong>Example :</strong> `http://localhost:8000/products?gender=Women&size=XS,S,M`
+
+```
+{
+    "status": "successfully.",
+    "total": 9,
+    "results": [
+        {
+            "product_id": 6,
+            "gender": "Women",
+            "style": "Plain color / Black",
+            "size": "XS",
+            "price": 290
+        },
+        {
+            "product_id": 7,
+            "gender": "Women",
+            "style": "Plain color / Black",
+            "size": "S",
+            "price": 290
+        },
+        ...
+        ...
+        ...
+    ]    
+```
  
 </p>
 </details>
