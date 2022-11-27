@@ -1,10 +1,15 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './.env' });
+
+const { DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE } = process.env;
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'clothes_shop',
+    host: DB_HOST,
+    user: DB_USERNAME,
+    password: DB_PASSWORD,
+    database: DB_DATABASE,
 });
 
 const filter = function(query) {
