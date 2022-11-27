@@ -4,6 +4,18 @@
 
 You can import a database from `./database/clothes_shop.sql` into your MySQL and Postman Collections from `./cs.postman_collection` It might be useful for you. But if your device does not already have MySQL and phpMyAdmin, you can follow the instructions at the bottom to install them using Docker.
 
+<h3>Setting up your local environment</h3>
+
+create an `.env` file in the application root directory.
+
+```
+DB_HOST=localhost
+DB_USERNAME=root
+DB_PASSWORD=123456
+DB_DATABASE=clothes_shop
+PORT=8000
+```
+
 <h3>API Endpoints</h3>
 
 The root path is `/`
