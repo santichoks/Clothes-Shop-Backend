@@ -1,4 +1,4 @@
-# Clothes-Shop-Example
+# Ex-Clothes-Shop-Express
 
 <h3>Introduction</h3>
 
