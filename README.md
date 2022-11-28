@@ -1,8 +1,9 @@
 # ClothesShop-Example-Express
 
 <h3>Introduction</h3>
-
+<ul>
 You can import a database from `./database/clothes_shop.sql` into your MySQL and Postman Collections from `./cs.postman_collection` It might be useful for you. But if your device does not already have MySQL and phpMyAdmin, you can follow the instructions at the bottom to install them using Docker.
+</ul>
 
 <details><summary><h3>Getting started</h3></summary>
 <p>
