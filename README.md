@@ -1,4 +1,4 @@
-# Clothes-Shop-Backend
+# Clothes-Shop-Example
 
 <h3>Introduction</h3>
 
