@@ -1,4 +1,4 @@
-# ClothesShop-Example-Express
+# ClothesShop-Practice-Express
 
 <h3>Introduction</h3>
 <ul>
@@ -14,8 +14,8 @@ You can import a database from `./database/clothes_shop.sql` into your MySQL and
 <strong>Install</strong>
  
 ```
-$ git clone https://github.com/santichoks/ClothesShop-Example-Express.git
-$ cd ClothesShop-Example-Express
+$ git clone https://github.com/santichoks/ClothesShop-Practice-Express.git
+$ cd ClothesShop-Practice-Express
 $ npm install
 ```
 </li>
