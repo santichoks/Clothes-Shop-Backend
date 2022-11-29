@@ -14,8 +14,8 @@ You can import a database from `./database/clothes_shop.sql` into your MySQL and
 <strong>Install</strong>
  
 ```
-$ git clone https://github.com/santichoks/Clothes-Shop-Backend.git
-$ cd Clothes-Shop-Backend
+$ git clone https://github.com/santichoks/ClothesShop-Example-Express.git
+$ cd ClothesShop-Example-Express
 $ npm install
 ```
 </li>
