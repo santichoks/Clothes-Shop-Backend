@@ -132,7 +132,7 @@ PORT=8000
 
 |Endpoint|Method|Optional Params|Example|
 |:-:|:-:|:-:|-|
-|`orders`|POST|-|`http://localhost:8000/orders`|
+|`/orders`|POST|-|`http://localhost:8000/orders`|
 
 <strong>JSON Body format</strong>
 
